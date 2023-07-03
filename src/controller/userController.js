@@ -3,6 +3,7 @@ const returnIdade = require('../Utils/calculaIdade')
 
 exports.validateUser = async(req,res) => {
 let pessoa = req.body
+console.log(pessoa)
 try {
     let adress = await returnAdress.apiViaCep(pessoa.cep)
     pessoa.adress = adress
